@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="10dp"
+    tools:context=".ScanActivity">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/scan"
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:textSize="20dp"
+        android:text="මුලින්ම scan කරන්න"
+        android:background="#2196F3"
+        android:textColor="@color/white"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layoutToText"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toBottomOf="@id/scan"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/scanedName"
+        android:layout_width="wrap_content"
+        android:layout_marginTop="5dp"
+        android:textSize="20dp"
+        android:text="Name Text"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toEndOf="@id/scanedN"
+        />
+
+        <TextView
+            android:id="@+id/scanedN"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="20dp"
+            android:text="Name : "
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/scanedNumber"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="20dp"
+            android:text="Number Text"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/scanedName"
+            app:layout_constraintStart_toEndOf="@id/scanedNum"
+            />
+
+        <TextView
+            android:id="@+id/scanedNum"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="20dp"
+            android:text="Number : "
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/scanedN"
+            app:layout_constraintStart_toStartOf="parent"
+      />
+
+        <TextView
+            android:id="@+id/scanedClass"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="20dp"
+            android:text="Number Text"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/scanedNumber"
+            app:layout_constraintStart_toEndOf="@id/scanedC"
+            />
+
+        <TextView
+            android:id="@+id/scanedC"
+            android:layout_width="wrap_content"
+            android:layout_marginTop="5dp"
+            android:textSize="20dp"
+            android:text="Class : "
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/scanedNumber"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/scanedLDate"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:hint="Enter Paid Date"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/scanedClass"
+            app:layout_constraintStart_toEndOf="@id/scanedLD"
+            />
+
+        <TextView
+            android:id="@+id/scanedLD"
+            android:layout_width="wrap_content"
+            android:textSize="20dp"
+            android:text="Last Paid Date : "
+            android:textColor="@color/black"
+            android:layout_height="wrap_content"
+            app:layout_constraintTop_toBottomOf="@id/scanedC"
+            app:layout_constraintStart_toStartOf="parent"
+            />
+
+        <EditText
+            android:id="@+id/enterID"
+            android:layout_width="match_parent"
+
+            android:textSize="20dp"
+            android:background="@color/white"
+            android:textColor="@color/white"
+            android:layout_height="wrap_content"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/scanedLDate"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/dates_layout"
+        android:layout_width="match_parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/layoutToText"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/enterDates"
+            android:layout_width="match_parent"
+            android:textSize="20dp"
+            android:hint="Enter Dates"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_height="wrap_content"
+            />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/add_date"
+        app:layout_constraintTop_toBottomOf="@id/dates_layout"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#CDDC39"
+        android:text="දිනය එකතු කරන්න (Save Date)"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/instruction"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@id/add_date"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"
+        android:text="කරුණාකර, දින හතර එකතු කල පසුව පමණක් මාසය සකසන්න."
+        android:textColor="#F44336"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/setTOMONTH"
+        app:layout_constraintTop_toBottomOf="@id/instruction"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="මාසය සකසන්න."
+        android:background="#CDDC39"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <LinearLayout
+        android:id="@+id/recycleView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/setTOMONTH"
+        android:background="#FF9800"
+        android:layout_marginTop="20dp"
+        android:orientation="vertical"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:padding="10dp"
+            android:textColor="@color/white"
+            android:gravity="center"
+            android:layout_height="wrap_content"
+            android:text="ලැබීමට ඇති මුදල් විස්තර"/>
+
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+        <androidx.cardview.widget.CardView
+        layout_width="match_parent"
+        app:cardElevation="8dp"
+        android:background="#FF9800"
+        app:cardCornerRadius="8dp"
+        android:layout_margin="10dp"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        tools:ignore="MissingConstraints">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginEnd="15dp"
+            android:layout_marginVertical="5dp"
+            android:orientation="vertical">
+
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:textColor="@color/white"
+                    android:background="#F44336"
+                    android:id="@+id/tvSetPaidStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textStyle="bold"
+                    android:textSize="25dp"
+                    android:padding="5dp"
+                    android:text="Not Paid"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/dina"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:text="Dates"/>
+
+                <TextView
+                    android:id="@+id/tvDates"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textSize="20dp"
+                    android:textColor="@color/black"
+                    android:text="Dates"/>
+
+
+            </LinearLayout>
+
+            <!--<LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/tvUserID"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="User ID"/>
+
+            </LinearLayout>-->
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/send_whatsapp"
+                android:layout_width="match_parent"
+                android:text="1. Paid and Send to Whatsapp"
+                android:background="#521F40A2"
+                android:layout_height="50dp"/>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/delete_state"
+                android:layout_width="match_parent"
+                android:text="2. Delete"
+                android:layout_marginTop="5dp"
+                android:background="#521F40A2"
+                android:layout_height="50dp"/>
+
+
+        </LinearLayout>
+
+        </androidx.cardview.widget.CardView>
+
+        </ScrollView>
+
+
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/recycleView"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content"/>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

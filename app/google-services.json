@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "866250655144",
+    "project_id": "science-class-b5dd5",
+    "storage_bucket": "science-class-b5dd5.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:866250655144:android:cede0e25c9f9fc7d64899d",
+        "android_client_info": {
+          "package_name": "com.example.scienceclass"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "866250655144-hmb321nj0e8lqp16ptqm5r9d1pqto6vj.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDZX8hb6XNfYlwHO_R5gi6Pk660i0zncPU"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "866250655144-hmb321nj0e8lqp16ptqm5r9d1pqto6vj.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
